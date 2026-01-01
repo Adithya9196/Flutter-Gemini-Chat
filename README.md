@@ -25,5 +25,3 @@ A modern **AI chat application built with Flutter**, powered by **Google Gemini 
 * **Hive** 
 * **Provider** 
 * **flutter_markdown** (Markdown rendering)
-
-Just tell me 👍
