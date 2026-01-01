@@ -5,7 +5,7 @@ A modern **AI chat application built with Flutter**, powered by **Google Gemini 
 
 ---
 
-## ✨ Features
+## Features
 
 * Real-time AI chat using **Google Gemini**
 * **Continuous conversation** using previous chat context
