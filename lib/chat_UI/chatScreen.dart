@@ -47,9 +47,47 @@ class _ChatScreenState extends State<ChatScreen> {
           Expanded(
             child: chatModel.messageList.isEmpty && !chatModel.isLoading
                 ? Center(
-              child: Text(
-                'Start a conversation 👋',
-                style: Theme.of(context).textTheme.bodyLarge,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .primary
+                            .withOpacity(0.1),
+                      ),
+                      child: Icon(
+                        Icons.smart_toy_outlined,
+                        size: 60,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Text(
+                      'Start chatting with Gemini',
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Ask anything, get instant AI-powered answers.',
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: Theme.of(context)
+                            .textTheme
+                            .bodySmall
+                            ?.color,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
                 :  ListView.separated(
